@@ -28,7 +28,7 @@ sleep(3);
 def rajColorPick():
     while True:
         rajColor = str(input("What color would you like raj to be?"))
-        if rajColor in ["purple", "pink", "red", "blue", "green"]:
+        if rajColor in ["purple", "pink", "red", "blue", "green", "black", "white"]:
             tortuga.color(rajColor)
             return
         print("Invalid color selection. Try again")
@@ -63,7 +63,15 @@ newline();
 sleep(3);
 
 def rajMoveChoice(direction, amount): 
-  
 
+  def right(amount):
+    tortuga.right(90);
+    tortuga.fd(amount);
+  def left(amount):
+    tortuga.left(90);
+    tortuga.fd(amount);
 
+direction = float(input("How much would you like to move raj? (enter in decimal format)"))
+amount = str(input("what direction would you like to move raj in? (left or right)"))
 
+rajMoveChoice(direction, amount);
